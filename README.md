@@ -252,12 +252,12 @@ $n=230$
 
    因子：
    
-   $$
-   \text{profit-turnover ratio} = \frac{获利盘}{换手率}
-   $$
+$$
+\text{profit-turnover ratio} = \frac{获利盘}{换手率}
+$$
 
 
-   ratio $\uparrow$, 主力控盘$\uparrow$
+   ratio $\uparrow$, 主力控盘 $\uparrow$
 
 3. 成本均线差值
 
@@ -269,9 +269,9 @@ $n=230$
 
    因子：
    
-   $$
-   d=MA_5-MA_{\infty}
-   $$
+$$
+d=MA_5-MA_{\infty}
+$$
 
 4. Winner指标
 
