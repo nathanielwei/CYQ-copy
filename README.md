@@ -59,7 +59,7 @@ $$
 根据假设一，每个价位上的筹码数量为
 
 $$
-\Delta Q=\frac{vol\times \Delta}{\tilde{p}_{max}-\tilde{p}_{min}}
+\Delta Q=\frac{vol \times \Delta}{P_{max}-P_{min}}
 $$
 
 原本的筹码价格为
@@ -76,10 +76,10 @@ $$
 
 其中 $p_1=p_{min},p_n=p_{max},p_a=P_{min},p_b=P_{max}$。我们将其称为价格序列。
 
-对每个筹码价格上的筹码量用$Q_{\{\cdot\}}$表示，则截止昨日的筹码分布序列为
+对每个筹码价格上的筹码量用 $Q_{ \{\cdot\} }$表示，则截止昨日的筹码分布序列为
 
 $$
-Q_{p_1},Q_{p_2},\cdots,Q_{p_a},Q_{p_{a+1}},\cdots,Q_{p_{b-1}},Q_{p_b},\cdots,Q_{p_n}
+Q_{p_1}, Q_{p_2}, \cdots, Q_{p_a}, Q_{p_{a+1}}, \cdots, Q_{p_{b-1}}, Q_{p_b}, \cdots, Q_{p_n}
 $$
 
 我们称之为价格序列。由假设一，今日新增筹码的分布序列为
@@ -91,8 +91,9 @@ $$
 对应价格 $[p_a,\cdots,p_b]$​。则移入新增筹码后的分布序列变为
 
 $$
-\{Q_{p_k}\}_{k=1}^n=Q_{p_1},Q_{p_2},\cdots,Q_{p_{a-1}},(Q_{p_a}+\Delta Q),(Q_{p_{a+1}}+\Delta Q),\cdots,(Q_{p_{b-1}}+\Delta Q),(Q_{p_b}+\Delta Q),Q_{p_{b+1}},\cdots,Q_{p_n}
+Q_{p_{\cdot}} = Q_{p_1}, Q_{p_2}, \cdots, Q_{p_{a-1}}, (Q_{p_a}+\Delta Q), (Q_{p_{a+1}}+\Delta Q), \cdots, (Q_{p_{b-1}}+\Delta Q), (Q_{p_b}+\Delta Q), Q_{p_{b+1}}, \cdots, Q_{p_n}
 $$
+
 现在考虑筹码移出。根据假设二和下面等式
 
 $$
@@ -104,22 +105,25 @@ $$
 $$
 (C_0+vol)\times \frac{C_1}{C_0+vol}=C_1
 $$
+
 根据换手率公式
 
 $$
 \text{turnover}=\frac{vol}{C_1}
 $$
+
 得到
 
 $$
 \alpha=\frac{C_1}{C_0+vol}=\frac{1}{\frac{C_0}{C_1}+\frac{vol}{C_1}}=\frac{1}{C_0/C_1+\text{turnover}}
 $$
-通常 $C_1<C_0+vol$，因此 $0<\alpha<1$
+
+通常 $C_1 < C_0 + vol$，因此 $0<\alpha<1$
 
 移出筹码后，分布序列变为
 
 $$
-\{\alpha_k \times Q_{p_k}\}_{k=1}^n
+ \{ \alpha_k \times Q_{p_k} \}_{k=1}^n
 $$
 
 ## 四个基础衍生指标
@@ -176,7 +180,7 @@ $n=89$
 | ckdp | -0.0015315 | 0.57394213 | -0.6551384 | 0.21865126 | -0.0070042 |
 | comb | 0.01760196 | 0.43854448 | -0.4175883 | 0.14231837 | 0.12368014 |
 
-![image-20240622132335295](/Users/zdf/Library/Application Support/typora-user-images/image-20240622132335295.png)
+<img width="982" alt="image-20240622132335295" src="https://github.com/dafuzhuu/CYQ/assets/156023557/c5edc9ab-a0b1-4968-b108-727e4ac6108c">
 
 ### 上证小盘（000045.SH）
 
@@ -190,7 +194,8 @@ $n=222$
 | ckdp | -0.0181433 | 0.54673552 | -0.5743359 | 0.18585833 | -0.0976191 |
 | comb | 0.01814332 | 0.57433594 | -0.5467355 | 0.18585833 | 0.09761906 |
 
-![image-20240622140300443](/Users/zdf/Library/Application Support/typora-user-images/image-20240622140300443.png)
+<img width="981" alt="image-20240622140300443" src="https://github.com/dafuzhuu/CYQ/assets/156023557/3c44bd32-af54-4a0b-998b-4366fe6b470b">
+
 
 ### 上证中小盘（000046.SH）
 
@@ -204,7 +209,8 @@ IC测试结果（样本量$n=331$）
 | ckdp | -0.0128223 | 0.51043588 | -0.5741126 | 0.18750963 | -0.0683822 |
 | comb | 0.01282231 | 0.57411265 | -0.5104359 | 0.18750963 | 0.06838216 |
 
-![image-20240622134250745](/Users/zdf/Library/Application Support/typora-user-images/image-20240622134250745.png)
+<img width="982" alt="image-20240622134250745" src="https://github.com/dafuzhuu/CYQ/assets/156023557/0fa86c6e-333a-48c2-959f-884c8907427c">
+
 
 ### 中证500（000905.SH）
 
@@ -218,7 +224,8 @@ IC测试结果（样本量$n=331$）
 | ckdp | -0.0147411 | 0.46812548 | -0.5592758 | 0.17249826 | -0.0854565 |
 | comb | 0.0147411  | 0.55927578 | -0.4681255 | 0.17249826 | 0.08545653 |
 
-![image-20240622141718246](/Users/zdf/Library/Application Support/typora-user-images/image-20240622141718246.png)
+<img width="982" alt="image-20240622141718246" src="https://github.com/dafuzhuu/CYQ/assets/156023557/c91dfd1d-cf24-43c5-b8dc-6e50e53c96eb">
+
 
 ### 沪深300
 
@@ -232,7 +239,8 @@ $n=230$
 | ckdp | 0.00824269 | 0.54567956 | -0.665214  | 0.20471202 | 0.04026482 |
 | comb | 0.01314653 | 0.32283311 | -0.3434028 | 0.09879761 | 0.13306527 |
 
-![image-20240622191400577](/Users/zdf/Library/Application Support/typora-user-images/image-20240622191400577.png)
+<img width="981" alt="image-20240622191400577" src="https://github.com/dafuzhuu/CYQ/assets/156023557/c6377901-3bfb-43ce-b1f8-9f61d9c69fc0">
+
 
 经过对不同的股票池进行测试，我们发现上述指标对大市值股票相对友好，而在小盘股中的有效性很低。考虑到IC值均比较低，上述因子可能已经失效。
 
